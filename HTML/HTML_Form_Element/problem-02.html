@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital / Clinic Appointment Booking</title>
+</head>
+
+<body>
+
+    <h1>Clinic Appointment Booking</h1>
+
+    <p>
+        Welcome to our Clinic Appointment Booking page.
+        Please provide your details and select your preferred doctor,
+        appointment date, time and visit type. Fields marked as required
+        must be completed before submitting the form.
+    </p>
+
+    <hr>
+
+    <h2>Clinic Timings</h2>
+
+    <table border="1">
+        <tr>
+            <th>Day</th>
+            <th>Opening Time</th>
+            <th>Closing Time</th>
+        </tr>
+
+        <tr>
+            <td>Monday - Friday</td>
+            <td>9:00 AM</td>
+            <td>8:00 PM</td>
+        </tr>
+
+        <tr>
+            <td>Saturday</td>
+            <td>9:00 AM</td>
+            <td>5:00 PM</td>
+        </tr>
+
+        <tr>
+            <td>Sunday</td>
+            <td>10:00 AM</td>
+            <td>2:00 PM</td>
+        </tr>
+    </table>
+
+    <br>
+
+    <p>
+        For emergencies, please
+        <a href="tel:+911234567890">contact our emergency helpline</a>.
+    </p>
+
+    <p>
+        Clinic Reception:
+        <a href="mailto:reception@citycareclinic.com">
+            reception@citycareclinic.com
+        </a>
+    </p>
+
+    <hr>
+
+    <form action="#" method="post">
+
+        <h2>1. Patient Information</h2>
+
+        <label for="patientname">Patient Name:</label>
+        <input type="text"
+               id="patientname"
+               name="patient_name"
+               placeholder="Enter patient's full name"
+               minlength="3"
+               maxlength="60"
+               required>
+
+        <br><br>
+
+        <label for="email">Email Address:</label>
+        <input type="email"
+               id="email"
+               name="email"
+               placeholder="example@gmail.com"
+               autocomplete="email"
+               required>
+
+        <br><br>
+
+        <label for="mobile">Mobile Number:</label>
+        <input type="tel"
+               id="mobile"
+               name="mobile_number"
+               placeholder="Enter 10-digit mobile number"
+               pattern="[0-9]{10}"
+               minlength="10"
+               maxlength="10"
+               required>
+
+        <br><br>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date"
+               id="dob"
+               name="date_of_birth"
+               min="1920-01-01"
+               max="2026-08-31"
+               required>
+
+        <br><br>
+
+        <label for="patientid">Patient ID (Optional):</label>
+        <input type="text"
+               id="patientid"
+               name="patient_id"
+               placeholder="Enter patient ID if available"
+               minlength="4"
+               maxlength="20">
+
+        <br><br>
+
+
+        <h2>2. Appointment Details</h2>
+
+        <label for="appointmentdate">Appointment Date:</label>
+        <input type="date"
+               id="appointmentdate"
+               name="appointment_date"
+               min="2026-09-01"
+               max="2026-12-31"
+               required>
+
+        <br><br>
+
+        <label for="appointmenttime">Preferred Appointment Time:</label>
+        <input type="time"
+               id="appointmenttime"
+               name="appointment_time"
+               min="09:00"
+               max="20:00"
+               required>
+
+        <br><br>
+
+
+        <label for="doctor">Select Doctor:</label>
+
+        <select id="doctor"
+                name="doctor"
+                required>
+
+            <option value="">-- Select a Doctor --</option>
+
+            <option value="dr-ananya-sharma">
+                Dr. Ananya Sharma - General Physician
+            </option>
+
+            <option value="dr-rohan-mehta">
+                Dr. Rohan Mehta - Cardiologist
+            </option>
+
+            <option value="dr-neha-verma">
+                Dr. Neha Verma - Dermatologist
+            </option>
+
+            <option value="dr-arjun-kapoor">
+                Dr. Arjun Kapoor - Orthopedic Specialist
+            </option>
+
+            <option value="dr-priya-singh">
+                Dr. Priya Singh - Pediatrician
+            </option>
+
+            <option value="dr-kunal-gupta">
+                Dr. Kunal Gupta - Neurologist
+            </option>
+
+        </select>
+
+        <br><br>
+
+
+        <h2>3. Visit Type</h2>
+
+        <input type="radio"
+               id="newpatient"
+               name="visit_type"
+               value="new_patient"
+               required>
+
+        <label for="newpatient">New Patient</label>
+
+        <br>
+
+        <input type="radio"
+               id="followup"
+               name="visit_type"
+               value="follow_up">
+
+        <label for="followup">Follow-up</label>
+
+        <br>
+
+        <input type="radio"
+               id="consultation"
+               name="visit_type"
+               value="consultation">
+
+        <label for="consultation">Consultation</label>
+
+        <br>
+
+        <input type="radio"
+               id="emergency"
+               name="visit_type"
+               value="emergency">
+
+        <label for="emergency">Emergency</label>
+
+        <br><br>
+
+
+        <h2>4. Preferred Communication Method</h2>
+
+        <input type="radio"
+               id="phone"
+               name="communication_method"
+               value="phone"
+               required>
+
+        <label for="phone">Phone Call</label>
+
+        <br>
+
+        <input type="radio"
+               id="emailcommunication"
+               name="communication_method"
+               value="email">
+
+        <label for="emailcommunication">Email</label>
+
+        <br>
+
+        <input type="radio"
+               id="sms"
+               name="communication_method"
+               value="sms">
+
+        <label for="sms">SMS</label>
+
+        <br><br>
+
+
+        <h2>5. Reason for Visit</h2>
+
+        <label for="reason">
+            Reason for Visit / Additional Information:
+        </label>
+
+        <br>
+
+        <textarea id="reason"
+                  name="reason_for_visit"
+                  rows="6"
+                  cols="55"
+                  placeholder="Describe your reason for the visit or provide additional information."
+                  minlength="10"
+                  maxlength="500"
+                  required></textarea>
+
+        <br><br>
+
+
+        <h2>6. Appointment Terms</h2>
+
+        <input type="checkbox"
+               id="terms"
+               name="appointment_terms"
+               value="accepted"
+               required>
+
+        <label for="terms">
+            I accept the clinic's appointment terms and confirm that
+            the information provided by me is correct.
+        </label>
+
+        <br><br>
+
+
+        <input type="submit"
+               name="submit_appointment"
+               value="Book Appointment">
+
+        <input type="reset"
+               name="reset_appointment"
+               value="Reset Form">
+
+    </form>
+
+    <hr>
+
+    <p>
+        <strong>Note:</strong>
+        This form is an appointment request. The clinic will confirm
+        the appointment based on doctor availability.
+    </p>
+
+</body>
+
+</html>

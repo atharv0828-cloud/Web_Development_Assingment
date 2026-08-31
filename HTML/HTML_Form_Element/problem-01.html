@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>College Admission Application Form</title>
+</head>
+
+<body>
+
+    <h1>College Admission Application Form</h1>
+
+    <p>
+        Welcome to the College Admission Application Form. 
+        Please fill in all the required details carefully and accurately.
+        Fields marked as required must be completed before submitting the form.
+    </p>
+
+    <hr>
+
+    <img src=""C:\Users\HEMANT\OneDrive\Pictures\Screenshots\Screenshot 2026-08-31 105852.png""
+         alt="College Admission Banner">
+
+    <h2>Admission Information</h2>
+
+    <p>
+        For more information about admission, visit our
+        <a href="https://www.gla.ac.in/" target="_blank">College Website</a>.
+    </p>
+
+    <form action="#" method="post" enctype="multipart/form-data">
+
+        <h2>1. Personal Information</h2>
+
+        <label for="fullname">Full Name:</label>
+        <input type="text"
+               id="fullname"
+               name="full_name"
+               placeholder="Enter your full name"
+               minlength="3"
+               maxlength="50"
+               required>
+        <br><br>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date"
+               id="dob"
+               name="date_of_birth"
+               min="1995-01-01"
+               max="2010-12-31"
+               required>
+        <br><br>
+
+        <label for="email">Email Address:</label>
+        <input type="email"
+               id="email"
+               name="email"
+               placeholder="example@gmail.com"
+               autocomplete="email"
+               required>
+        <br><br>
+
+        <label for="mobile">Mobile Number:</label>
+        <input type="tel"
+               id="mobile"
+               name="mobile_number"
+               placeholder="10-digit mobile number"
+               pattern="[0-9]{10}"
+               maxlength="10"
+               required>
+        <br><br>
+
+        <label for="pin">Application PIN:</label>
+        <input type="password"
+               id="pin"
+               name="application_pin"
+               placeholder="Enter 6-digit PIN"
+               minlength="6"
+               maxlength="6"
+               pattern="[0-9]{6}"
+               required>
+        <br><br>
+
+
+        <h3>Gender</h3>
+
+        <input type="radio"
+               id="male"
+               name="gender"
+               value="male"
+               required>
+        <label for="male">Male</label>
+
+        <input type="radio"
+               id="female"
+               name="gender"
+               value="female">
+        <label for="female">Female</label>
+
+        <input type="radio"
+               id="other"
+               name="gender"
+               value="other">
+        <label for="other">Other</label>
+
+        <br><br>
+
+
+        <label for="category">Category:</label>
+        <select id="category" name="category" required>
+            <option value="">-- Select Category --</option>
+            <option value="general">General</option>
+            <option value="obc">OBC</option>
+            <option value="sc">SC</option>
+            <option value="st">ST</option>
+            <option value="ews">EWS</option>
+        </select>
+
+        <br><br>
+
+
+        <h2>2. Course / Program Selection</h2>
+
+        <label for="course">Select Program:</label>
+        <select id="course" name="course" required>
+
+            <option value="">-- Select a Program --</option>
+
+            <option value="btech-cse">B.Tech Computer Science</option>
+
+            <option value="btech-ai-ml" selected>
+                B.Tech Artificial Intelligence & Machine Learning
+            </option>
+
+            <option value="btech-ds">
+                B.Tech Data Science
+            </option>
+
+            <option value="bca">
+                Bachelor of Computer Applications
+            </option>
+
+            <option value="bba">
+                Bachelor of Business Administration
+            </option>
+
+            <option value="bpharm">
+                Bachelor of Pharmacy
+            </option>
+
+            <option value="mba">
+                Master of Business Administration
+            </option>
+
+        </select>
+
+        <br><br>
+
+
+        <h2>3. Previous Qualification</h2>
+
+        <label for="qualification">Previous Qualification:</label>
+        <select id="qualification" name="previous_qualification" required>
+            <option value="">-- Select Qualification --</option>
+            <option value="12th">12th / Senior Secondary</option>
+            <option value="diploma">Diploma</option>
+            <option value="graduation">Graduation</option>
+            <option value="other">Other</option>
+        </select>
+
+        <br><br>
+
+        <label for="percentage">Percentage / CGPA:</label>
+        <input type="number"
+               id="percentage"
+               name="percentage_cgpa"
+               placeholder="Enter percentage"
+               min="0"
+               max="100"
+               step="0.01"
+               required>
+        <br><br>
+
+        <label for="passingyear">Passing Year:</label>
+        <input type="number"
+               id="passingyear"
+               name="passing_year"
+               min="2000"
+               max="2026"
+               step="1"
+               required>
+        <br><br>
+
+        <label for="school">School / College Name:</label>
+        <input type="text"
+               id="school"
+               name="school_college_name"
+               placeholder="Enter school or college name"
+               minlength="3"
+               maxlength="100"
+               required>
+        <br><br>
+
+
+        <h2>4. Address Information</h2>
+
+        <label for="address">Permanent Address:</label><br>
+        <textarea id="address"
+                  name="permanent_address"
+                  rows="5"
+                  cols="50"
+                  placeholder="Enter your complete permanent address"
+                  minlength="10"
+                  maxlength="250"
+                  required></textarea>
+
+        <br><br>
+
+
+        <h2>5. Additional Information</h2>
+
+        <p>Select the facilities you are interested in:</p>
+
+        <input type="checkbox"
+               id="hostel"
+               name="facilities"
+               value="hostel">
+        <label for="hostel">Hostel Accommodation</label>
+
+        <br>
+
+        <input type="checkbox"
+               id="transport"
+               name="facilities"
+               value="transport">
+        <label for="transport">College Transport</label>
+
+        <br>
+
+        <input type="checkbox"
+               id="sports"
+               name="facilities"
+               value="sports">
+        <label for="sports">Sports Facilities</label>
+
+        <br>
+
+        <input type="checkbox"
+               id="library"
+               name="facilities"
+               value="library">
+        <label for="library">Library Facilities</label>
+
+        <br><br>
+
+
+        <h2>6. Admission Document</h2>
+
+        <label for="document">Upload Admission Document:</label>
+        <input type="file"
+               id="document"
+               name="admission_document"
+               accept=".pdf,.jpg,.jpeg,.png"
+               required>
+
+        <br><br>
+
+
+        <h2>7. Declaration</h2>
+
+        <input type="checkbox"
+               id="declaration"
+               name="declaration"
+               value="accepted"
+               required>
+
+        <label for="declaration">
+            I declare that all the information provided by me is true and
+            correct to the best of my knowledge. I agree to the college
+            admission terms and conditions.
+        </label>
+
+        <br><br>
+
+
+        <input type="submit"
+               name="submit_application"
+               value="Submit Application">
+
+        <input type="reset"
+               name="reset_form"
+               value="Reset Form">
+
+    </form>
+
+    <hr>
+
+    <p>
+        <strong>Note:</strong> Please verify all information before submitting
+        your admission application.
+    </p>
+
+</body>
+</html>
